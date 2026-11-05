@@ -361,7 +361,7 @@ export function drawCodeImage(
 
     if (options.title.trim()) {
       ctx.font = fontString(fontSize * 0.82, false, false, family)
-      ctx.fillStyle = withAlpha(fg, 0.62)
+      ctx.fillStyle = withAlpha(fg, 0.72)
       ctx.textAlign = 'left'
       ctx.textBaseline = 'middle'
       ctx.fillText(options.title.trim(), textStart, headerHeight / 2 + fontSize * 0.04)
@@ -383,7 +383,7 @@ export function drawCodeImage(
 
     if (options.showLineNumbers) {
       ctx.font = fontString(fontSize * 0.82, false, false, family)
-      ctx.fillStyle = withAlpha(fg, 0.32)
+      ctx.fillStyle = withAlpha(fg, 0.5)
       ctx.textAlign = 'right'
       ctx.fillText(String(index + 1), padding + gutter - fontSize * 0.8, y)
     }
@@ -405,8 +405,8 @@ export function drawCodeImage(
   })
 
   if (footerHeight > 0) {
-    ctx.font = fontString(fontSize * 0.78, false, false, family)
-    ctx.fillStyle = withAlpha(fg, 0.45)
+    ctx.font = fontString(fontSize * 0.82, false, false, family)
+    ctx.fillStyle = withAlpha(fg, 0.7)
     ctx.textAlign = 'right'
     ctx.textBaseline = 'middle'
     ctx.fillText(
