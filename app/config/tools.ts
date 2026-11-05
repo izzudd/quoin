@@ -166,6 +166,23 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
     ]
   },
   {
+    id: 'code',
+    name: 'Code Tools',
+    description: 'Turn code into shareable, syntax-highlighted images',
+    icon: 'i-lucide-code',
+    tools: [
+      {
+        id: 'code-image',
+        name: 'Code to Image',
+        description: 'Paste a snippet and export a Shiki-highlighted PNG — themes, gradients, padding, window chrome, copy to clipboard',
+        path: '/code/to-image',
+        icon: 'i-lucide-image',
+        badge: 'Shiki',
+        keywords: ['code', 'image', 'png', 'screenshot', 'carbon', 'shiki', 'snippet', 'highlight', 'share', 'clipboard', 'social', 'export']
+      }
+    ]
+  },
+  {
     id: 'markdown',
     name: 'Markdown Tools',
     description: 'Convert Markdown to HTML, HTML to Markdown, Google Docs paste-ready rich text, and format tables',
