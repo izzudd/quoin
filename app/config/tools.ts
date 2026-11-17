@@ -166,6 +166,23 @@ export const TOOL_CATEGORIES: ToolCategory[] = [
     ]
   },
   {
+    id: 'image',
+    name: 'Image Tools',
+    description: 'Convert and re-tone images for screens that only own a few greys — e-ink panels, e-readers, and bitmaps',
+    icon: 'i-lucide-image',
+    tools: [
+      {
+        id: 'image-eink-bitmap',
+        name: 'E-Ink Bitmap',
+        description: 'Turn any image into a dithered 24-bit BMP sized for an e-ink panel — Xteink X4/X4 Pro, X3, or a custom size, in four greys or one bit',
+        path: '/image/eink-bitmap',
+        icon: 'i-lucide-tablet',
+        badge: 'E-Ink',
+        keywords: ['image', 'bitmap', 'bmp', 'eink', 'e-ink', 'dither', 'floyd-steinberg', 'bayer', 'greyscale', 'grayscale', 'quantize', 'wallpaper', 'sleep screen', 'xteink', 'x4', 'ereader', 'e-reader', 'crosspoint', 'kindle', 'kobo', '1-bit', 'monochrome']
+      }
+    ]
+  },
+  {
     id: 'code',
     name: 'Code Tools',
     description: 'Turn code into shareable, syntax-highlighted images',
