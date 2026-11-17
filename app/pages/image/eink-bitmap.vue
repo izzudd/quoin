@@ -60,8 +60,8 @@ const presetItems = EINK_PRESETS.map(preset => ({
   value: preset.id
 }))
 const fitItems = [
-  { label: 'Cover — fill the panel, crop the rest', value: 'cover' },
-  { label: 'Contain — fit whole image, add margins', value: 'contain' }
+  { label: 'Cover — fill the panel', value: 'cover' },
+  { label: 'Contain — fit whole image', value: 'contain' }
 ]
 const levelItems = [
   { label: '4 greys (0/85/170/255)', value: 4 },
@@ -452,12 +452,17 @@ onBeforeUnmount(() => {
         </div>
 
         <div class="relative flex-1 flex items-center justify-center p-5 overflow-auto">
-          <img
+          <!-- Paper mat: a dark-edged plate would otherwise melt into the dark pane. -->
+          <div
             v-if="sourceUrl"
-            :src="sourceUrl"
-            alt="Source image"
-            class="max-w-full max-h-[56vh] object-contain rounded-lg shadow-lg"
+            class="max-w-full rounded-lg bg-white p-2.5 shadow-xl ring-1 ring-black/10"
           >
+            <img
+              :src="sourceUrl"
+              alt="Source image"
+              class="max-w-full max-h-[68vh] object-contain rounded-sm"
+            >
+          </div>
 
           <div
             v-else
